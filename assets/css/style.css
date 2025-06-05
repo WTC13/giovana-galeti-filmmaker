@@ -64,11 +64,11 @@ body {
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin-left: -3rem;
+    /* margin-left: -3rem; */
     justify-content: flex-start;
     position: relative;
     z-index: 2;
-    padding: 0.2rem 2rem 1.5rem 0.1rem; /* padding-top menor */
+    padding: 0 2rem 1.5rem 0.1rem;  /* padding-top menor */
     min-width: 350px;
     max-width: 100%;
     box-shadow: 0 0 40px 0 rgba(0,0,0,0.04);
@@ -77,7 +77,7 @@ body {
 .about-tags {
     display: flex;
     gap: 2.5rem; /* aumente aqui para mais espaço entre as tags */
-    margin: 0 auto 2.5rem auto;
+    margin: 0 auto -10rem auto; /* sobe ou desce SOBRE MIM */
     justify-content: center;
     z-index: 10;
     position: relative;
@@ -103,7 +103,7 @@ body {
     font-weight: 900;
     color: #fff;
     background: transparent;
-    margin-bottom: 1.5rem;
+    margin-bottom: -10rem;
     text-align: left;
     position: relative;
     left: 0;
@@ -134,18 +134,29 @@ body {
     display: inline-block;
     background: transparent;
     position: relative;
-    left: 4vw; /* Ajuste para sobrepor a foto da direita */
+    left: 1vw; /* Ajuste para sobrepor a foto da direita */
     z-index: 4;
     font-size: 1em;
 }
 
 .about-text {
-    color: #333;
-    font-size: 1.2rem;
-    line-height: 1.7;
-    text-align: center;
-    max-width: 500px;
-    margin: 0 auto;
+    color: #fff;
+    font-size: 1.25rem;
+    font-family: 'Poppins', Arial, sans-serif;
+    line-height: 1.8;
+    letter-spacing: 0.02em;
+    text-align: left;
+    font-weight: 400;
+    word-break: break-word;
+
+    /* Esses dois são os principais */
+    margin-left: 5.2rem;     /* ajusta início para alinhar com o “S” */
+    max-width: 100rem;      /* define o “fim” antes do “M” */
+    padding: 0;
+}
+
+.about-text p {
+    margin-bottom: 1.2em;
 }
 
 /* Responsivo */
