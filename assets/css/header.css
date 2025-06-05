@@ -1,0 +1,42 @@
+#main{
+    background-color: #000000;
+    height: 100vh;
+}
+
+#main .title-main{
+    font-size: 480px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--bg1);
+    height: 100vh;
+}
+
+#main .title-main img {
+  position: absolute;
+  top: 10; 
+  left: 50%; 
+  transform: translateX(-50%); 
+  z-index: 10; 
+  width: 900px;
+  height: 900px;
+  /* background-color: aliceblue; */
+}
+
+.title-second{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 90px;
+    margin: 0px 35px 0px 35px;    
+}
+
+.h2-1{
+    height: 750px;
+    font-size: 32px;
+}
+
+.h2-2{
+    height: 750px;
+    font-size: 32px;
+}
