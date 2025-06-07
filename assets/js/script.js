@@ -1,41 +1,49 @@
-import React from 'react';
-import { motion } from 'framer-motion';
-import galetiprincipal from '../images/galetiprincipal.jpg'; // Certifique-se de que o caminho esteja correto
+//carrousel de fotos...
 
-const ImagePopup = ({ onClose }) => {
-    return (
-        <motion.div
-            initial={{ x: '-100%', opacity: 0 }} // Começa fora da tela (à esquerda)
-            animate={{ x: 0, opacity: 1 }} // Animação para entrar na tela
-            exit={{ x: '-100%', opacity: 0 }} // Sai para a esquerda
-            transition={{ duration: 0.5 }} // Duração da animação
-            style={{
-                position: 'fixed',
-                top: 0,
-                left: 0,
-                width: '100%',
-                height: '100%',
-                backgroundColor: 'rgba(0, 0, 0, 0.8)', // Fundo escuro
-                display: 'flex',
-                justifyContent: 'center',
-                alignItems: 'center',
-                zIndex: 1000, // Garante que o pop-up fique acima de outros elementos
-            }}
+document.addEventListener('DOMContentLoaded', function() {
+  const container = document.querySelector('.carousel-container');
+  let imgs = Array.from(container.children);
 
+  // DUPLICA as imagens para o efeito de loop
+  imgs.forEach(img => {
+    const clone = img.cloneNode(true);
+    container.appendChild(clone);
+  });
 
-onClick={onClose} // Fecha o pop-up ao clicar fora da imagem
-        >
-            <motion.img
-                src={galetiprincipal}
-                alt="Galetiprincipal"
-                style={{
-                    maxWidth: '90%',
-                    maxHeight: '90%',
-                    borderRadius: '10px',
-                }}
-            />
-        </motion.div>
-    );
-};
+  let scroll = 0;
+  let imgWidth = imgs[0].offsetWidth + 32; // 32 = gap (ajuste se mudar o gap)
+  let totalWidth = imgWidth * imgs.length;
+  let animationId;
+  let paused = false;
 
-export default ImagePopup;
+  function animate() {
+    scroll += 7;
+    container.style.transform = `translateX(${-scroll}px)`;
+    if (scroll >= totalWidth) {
+      scroll = 0;
+      container.style.transform = `translateX(0)`;
+    }
+    animationId = requestAnimationFrame(animate);
+  }
+
+  animate();
+
+  // Parar o loop e desfocar ao clicar em qualquer imagem
+  container.addEventListener('click', function(e) {
+    if (e.target.classList.contains('carousel-img')) {
+      cancelAnimationFrame(animationId);
+      paused = true;
+      imgs.forEach(img => img.style.filter = 'blur(6px)');
+      e.target.style.filter = 'none';
+    }
+  });
+
+  // Se clicar fora do carrossel, volta ao normal
+  document.addEventListener('click', function(e) {
+    if (paused && !container.contains(e.target)) {
+      imgs.forEach(img => img.style.filter = '');
+      animate();
+      paused = false;
+    }
+  });
+});

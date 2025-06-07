@@ -7,6 +7,7 @@
         <meta name="description" content="Web site created using create-react-app"/>
         <link rel="icon" href="%PUBLIC_URL%/favicon.ico"/>
         <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css/carrousel.css">       
         <link rel="shortcut icon" href="./img/camera.png" type="image/png">
         <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
         <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
@@ -32,17 +33,78 @@
                 </div>
             </main>
         </header>
-        <section class="about">
-            <nav class="nav">
-                <a href="#" class="nav-title">2025</a>
-                <a href="#" class="nav-title">Q2</a>
-                <a href="#" class="nav-title">Q3</a>
-                <a href="#" class="nav-title">Q4</a>
+       <section class="about-section">
+    <div class="about-grid">
+        <!-- Coluna Esquerda: Foto 1 -->
+        <div class="about-photo about-photo-left">
+            <img src="./img/person.jpeg" alt="Giovana Galeti" />
+        </div>
+        <!-- Coluna Central: Conteúdo -->
+        <div class="about-content">
+            <nav class="about-tags">
+                <span class="about-tag">2025</span>
+                <span class="about-tag">Creative</span>
+                <span class="about-tag">Portfolio</span>
+                <span class="about-tag">Filmmaker</span>
             </nav>
-            
-        </section>
+            <h1 class="about-title">
+            <span class="sobre">SOBRE</span> <span class="mim">MIM</span>
+            </h1>
+            <div class="about-text">
+    <p>
+        Estudei e trabalhei na área de Designer Gráfico há 10 anos. 
+        Há 7 anos atrás, comecei a atender como recepcionista em uma clínica de estética. 
+        Além dos trabalhos dentro da recepção, a criação de conteúdo era indispensável. 
+        Dentro dessa clínica eu descobri o dom de criar roteiros e transformar momentos em filmes.
+    </p>
+    <p>
+        Hoje domino softwares como:<br>
+        After Effects, VFX, Lightroom e Corel Draw.
+    </p>
+    <p>
+        Hoje com 26 anos, já atendi marcas como Yves Saint Laurent, Granado, Nanica, O Boticário, Sephora e grandes nomes como Nay Alexandre, Tassiane Cruz, Tiago Abravanel, Mc Gui, Beatriz Tavares e Van Duarte.
+    </p>
+</div>
+        </div>
+        <!-- Coluna Direita: Foto 2 -->
+        <div class="about-photo about-photo-right">
+            <img src="./img/person.jpeg" alt="Giovana Galeti" />
+        </div>
+    </div>
+</section>
 
+<section class="portfolio-grid">
+  <div class="grid-item grid-fashion">
+    <img src="./img/anne.jpg" alt="Fashion Film">
+    <span class="grid-label">FASHION FILM</span>
+  </div>
+  <div class="grid-item grid-food">
+  <img src="./img/Beco-1.jpg" alt="Food Porn">
+  <span class="grid-label">FOOD PORN</span>
+</div>
+  <div class="grid-item grid-diversos">
+    <img src="./img/diversos.jpg" alt="Diversos">
+    <span class="grid-label">DIVERSOS</span> 
+  </div>
+</section>
 
-        <script src="./assets/js/script.js"></script>
+<section class="carousel-section">
+  <div class="carousel-container">
+    <img src="./img/cafe.jpg" alt="Café" class="carousel-img large">
+    <img src="./img/cafedelicia.jpg" alt="Café Delícia" class="carousel-img large">
+    <img src="./img/cantodaleitura.jpg" alt="Canto da Leitura" class="carousel-img large">
+    <img src="./img/cafezin.jpg" alt="Cafezinho" class="carousel-img large">
+    <img src="./img/livros.jpg" alt="Livros" class="carousel-img large">
+    <img src="./img/apazdocafe.jpg" alt="A Paz do Café" class="carousel-img large">
+    <img src="./img/cafedelicia.jpg" alt="Pai e Filho de Bike" class="carousel-img large"> 
+    <img src="./img/escritorio.jpg" alt="Escritório" class="carousel-img large">
+    <img src="./img/homemcachorro.jpg" alt="Homem com Cachorro" class="carousel-img large">
+  </div>
+  <div class="carousel-focus" style="display:none;">
+  <img id="focus-img" src="" alt="">
+</div>
+</section>
+        <script src="./ assets     /js/script  .js"></script>
+        <script src="assets/js/script.js"></script>
     </body>
 </html>
