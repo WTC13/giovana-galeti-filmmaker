@@ -1,0 +1,40 @@
+#contacts{
+    min-height: 100vh;
+}
+
+.contacts-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+}
+
+.contacts-1{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.title-contacts{
+    display: flex;
+    flex-direction: column;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+}
+
+.contacts-2 img{
+    height: 300px;
+    width: 300px;
+}
+
+.contacts-3{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.contacts-3 p{
+    margin-left: 5px;
+}

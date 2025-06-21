@@ -13,6 +13,10 @@
 
 @import url(./header.css);
 @import url(./about.css);
+@import url(./carrousel.css);
+@import url(./fashionfilme.css);
+@import url(./marcas/marcas.css);
+@import url(./contacts.css);
 
 
 :root{
@@ -40,7 +44,7 @@ body {
     width: 100vw;
     flex-direction: column;
     min-height: 100vh;
-    background: transparent
+    background: transparent;
     display: flex;
     align-items: stretch;
     justify-content: center;
@@ -262,3 +266,4 @@ body {
   display: block;
   object-fit: cover;
   border-radius: 1.5rem;
+}
