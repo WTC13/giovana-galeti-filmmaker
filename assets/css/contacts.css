@@ -1,12 +1,19 @@
 #contacts{
     min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
 }
 
 .contacts-container{
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 100%;
+    width: 60%;
+    margin: 0;
+    padding: 0;
 }
 
 .contacts-1{
@@ -14,27 +21,95 @@
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    flex-basis: 50%;
+    margin: 0;
+    padding: 0;
 }
 
 .title-contacts{
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    grid-template-rows: auto auto;
+    font-size: 24px;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+}
+
+/* .title-contacts p:first-child{
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    text-align: start;
+    font-weight: bold;
+} */
+
+.title-contacts p{
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    margin: 0;
+    padding: 0;
+}
+
+.title-contact{
+    grid-column: 1 / span 2;
+    grid-row: 1;
+    font-size: 100px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    align-items: end;
+    text-align: justify;
+    font-weight: 800;
+}
+
+
+.title-contacts span{
+    grid-column: 1;
+    grid-row: 2;
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    font-size: 100px;
+    font-weight: 800;
+    margin: 0;
+    padding: 0;
+}
+
+.title-contacts .text-contacts{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.text-contacts{
+    grid-column: 2;
+    grid-row: 2;
     display: flex;
     flex-direction: column;
+    align-items: flex-end;
+    justify-content: space-between;
+    text-align: justify;
     font-size: 24px;
     margin: 0;
     padding: 0;
 }
 
 .contacts-2 img{
-    height: 300px;
+    height: 200px;
     width: 300px;
+    object-fit: cover;
+    margin-left: 20px;
 }
 
 .contacts-3{
     display: flex;
     align-items: center;
     justify-content: center;
+    width: 100%;
+    /* margin-top: 50px; */
 }
 
 .contacts-3 p{
+    font-size: 30px;
     margin-left: 5px;
 }
