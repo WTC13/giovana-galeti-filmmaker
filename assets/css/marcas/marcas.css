@@ -1,0 +1,33 @@
+#marcas{
+    display: flex;
+    align-items: end;
+}
+
+.marcas-img{
+    display: flex;
+    align-items: end;
+    justify-content: end;
+    width: 90%;
+    min-height: 600px;
+}
+
+.marcas-img img{
+    margin: 30px 10px 20px 30px;
+    height: 700px;
+    width: 1400px;
+}
+
+.marcas-texts{
+    margin-left: 20px;
+}
+
+.marcas-texts h2{
+    font-size: 90px;
+    margin: 0;
+    padding: 0;
+    letter-spacing: 10px;
+}
+
+.marcas-texts p{
+    font-weight: 200;
+}

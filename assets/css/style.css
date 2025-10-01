@@ -13,6 +13,10 @@
 
 @import url(./header.css);
 @import url(./about.css);
+@import url(./carrousel.css);
+/* @import url(./fashionfilme.css); */
+@import url(./marcas/marcas.css);
+@import url(./contacts.css);
 
 
 :root{
@@ -40,7 +44,7 @@ body {
     width: 100vw;
     flex-direction: column;
     min-height: 100vh;
-    background: transparent
+    background: transparent;
     display: flex;
     align-items: stretch;
     justify-content: center;
@@ -244,4 +248,22 @@ body {
 .grid-diversos {
   grid-row: 2 / 3;
   grid-column: 2 / 3;
+}
+
+.grid-link {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  color: inherit;
+  width: 100%;
+  height: 100%;
+}
+
+.grid-link img {
+  width: 100%;
+  height: auto;
+  display: block;
+  object-fit: cover;
+  border-radius: 1.5rem;
 }
